@@ -1,0 +1,65 @@
+:root {
+  --slider-height: 300px;
+}
+html, body {
+  height: 100%;
+  background-color: #222222;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.slier {
+  width: 90%;
+  height: var(--slider-height);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.slier div {
+  width: 100%;
+  height: var(--slider-height);
+  display: none;
+  transition: all .3s;
+  box-sizing: border-box;
+}
+.slier div.active {
+  display: block;
+}
+.slier div img {
+  width: 100%;
+  height: var(--slider-height);
+  object-fit: fit;
+  box-sizing: border-box;
+}
+.slier nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.slier nav button {
+  padding: 20px 30px;
+  font: bold 30px monospace;
+  color: #00AAFF;
+  text-decoration: none;
+  background: #00000035;
+  transition: all .3s;
+  border: none;
+  box-sizing: border-box;
+}
+.slier nav button:hover {
+  background: #00000070;
+}
+.slier nav button:nth-child(1) {
+  border-radius: 0 10px 10px 0;
+}
+.slier nav button:nth-child(2) {
+  border-radius: 10px 0 0 10px;
+}
